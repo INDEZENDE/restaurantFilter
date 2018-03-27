@@ -24,13 +24,10 @@ max-width: 100%;
 
 a.carousel-item.active {
     width: 50%;
+
 }
 div.carousel {
   margin: 0;
   padding: 0;
-}
-
-h2 {
-  margin: -14rem;
-  z-index: 2;
+  height: 50vh;
 }
