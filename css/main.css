@@ -1,5 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 #pantalla1 {
-height: 600px;
+height: 1000px;
 z-index: 0;
 background-image: url("../assets/images/back1.jpg");
 background-size: 100% 100%;
@@ -8,10 +12,25 @@ max-width: 100%;
 }
 
 #pantalla2 {
-  height: 600px;
+  /* height: 400px; */
   z-index: 0;
   background-image: url("../assets/images/back2.jpg");
-  background-size: 100% 100%;
+  background-size: 100% 80%;
   background-repeat: no-repeat;
   max-width: 100%;
+
+
+}
+
+a.carousel-item.active {
+    width: 50%;
+}
+div.carousel {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: -14rem;
+  z-index: 2;
 }
