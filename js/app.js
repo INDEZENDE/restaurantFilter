@@ -3,13 +3,17 @@ $(document).ready(function() {
     var restaurante={};
     var $pantalla1 = $('#pantalla1');
     var $pantalla2 = $('#pantalla2');
+    $pantalla2.fadeOut();
     $pantalla1.fadeOut(5000);
     $pantalla2.fadeIn(10000);
+
+    //initialize  modals
+    $('.trigger-modal').modal();
 
 function loadPage() {
   $("#searcher").keyup(filterRestaurante);
   paintRestauranteInHtml(restaurante);
-  getLocation();
+  // getLocation();
   var instance = M.Carousel.getInstance(elem);
 }
 
@@ -21,16 +25,27 @@ var $newRestaurante = $("<article />", {
 
   var $containerRestauranteName = $("<h4 />");
   var $containerImg = $("<div />", { "class": "s12 m6"});
-  var $imgLogo = $("<img />", { "src": restaurante.photo, "href": "modal", "width": "80% ","class":"center" });
+  var $imgLogo = $("<img />", {  "width": "80% ","class":"center", "src": restaurante.photo});
   var $textName =$("<h3 />",{"class":"center" }).text(restaurante.name);
   var $textAdress =$("<h6 />").text(restaurante.adress);
   var $textFood =$("<h5 />",{"class":"amber-text" }).text(restaurante.food);
+// Creación del modal
+  var $modalButton=$("<button />", {"class":"btn modal-trigger","data-target":"modal1"}).text("ver mapa");
+  var $iframe=document.getElementById('iframe')
+  $iframe.src=restaurante.src;
+
+
 $newRestaurante.append($textName);
 $newRestaurante.append($textFood);
 $newRestaurante.append($textAdress);
 $newRestaurante.append($imgLogo);
-console.log($newRestaurante);
- $("#padre").prepend($newRestaurante);
+$newRestaurante.append($modalButton);
+
+
+var elem = document.querySelector('.modal');
+  var instance = M.Modal.init(elem, options);
+
+$("#padre").prepend($newRestaurante);
 
 }
 
