@@ -4,7 +4,6 @@ body, .container {
 }
 
 #pantalla1 {
-
 z-index: 4;
 background-image: url("../assets/images/back1.jpg");
 background-size: 100% 100%;
@@ -22,8 +21,16 @@ margin: 0;
   background-size: 100% 1500px;
   background-repeat: no-repeat;
   max-width: 100%;
+}
 
+.title1{
+  font-family: 'Pacifico', cursive;
+  font-size: 200px;
+}
 
+.title2 {
+  font-family: 'Cambay', sans-serif;
+  font-size: 100px;
 }
 
 a.carousel-item.active {
