@@ -1,13 +1,7 @@
-
-
-//Cambia de la pantalla1 a la pantalla 2-->
-
 $(document).ready(function() {
-    var restaurante={};
-    var $pantalla1 = $('#pantalla1');
-    var $pantalla2 = $('#pantalla2');
+  var $pantalla1 = $('#pantalla1');
+  var $pantalla2 = $('#pantalla2');
     setTimeout(splash, 500);
-
     //initialize  modals
     $('.trigger-modal').modal();
 
@@ -33,17 +27,23 @@ var $newRestaurante = $("<article />", {
   var $textAdress =$("<h6 />").text(restaurante.adress);
   var $textFood =$("<h5 />",{"class":"amber-text" }).text(restaurante.food);
 // Creación del modal
-  var $modalButton=$("<button />", {"class":"btn modal-trigger","data-target":"modal1"}).text("ver mapa");
-  var $iframe=document.getElementById('iframe')
+console.log(restaurante.adress);
+
+if(restaurante.adress.length>0){
+  console.log('si');
+  var $modalButton=$("<button />", {"class":"btn modal-trigger waves-light","data-target":"modal1"}).text("ver mapa");
+  $newRestaurante.append($modalButton);
+}
+
+  // var $modalButton=document.getElementById('modalButton');
+  var $iframe=document.getElementById('iframe');
   $iframe.src=restaurante.src;
-  // $iframe.attr({'width':'600','height':'450 frameborder="0" style="border:0"'})
-
-
-$newRestaurante.append($textName);
-$newRestaurante.append($textFood);
-$newRestaurante.append($textAdress);
-$newRestaurante.append($imgLogo);
-$newRestaurante.append($modalButton);
+  // $modalButton.text="ver mapa";
+  $modalButton.className="waves-light";
+  $newRestaurante.append($textName);
+  $newRestaurante.append($textFood);
+  $newRestaurante.append($textAdress);
+  $newRestaurante.append($imgLogo);
 
 
 var elem = document.querySelector('.modal');
@@ -95,9 +95,5 @@ function autoplay() {
     instance.open();
   }
 
-
 $(document).ready(loadPage);/*Ejecuta la función loadPage que tiene todas las funciones dentro*/
-
-
-
 });
