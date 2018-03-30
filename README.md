@@ -9,11 +9,11 @@ Se presenta el diseño, maquetado y funcionalidad, de una aplicación web, que p
 
 Cuando el usuario ingresa cada letra que conforma su petición, se detona un evento **keyup**, el cual mediante comparación de el **JSON** y el dato ingresado, devuelve aquellos que en la "key" asignada como  "food" coincida. Los datos devueltos se reflejan en **HTML** por medio del **DOM** y  **jQuery**.
 
-![ Restaurante](assets/images/restaurante.png)
+![ Restaurante](assets/images/restaurantea.png)
 
 Finalmente, por cada restaurante regresado como respuesta se genera también un botón que detona un modal, cuya respuesta es el mapa de cada uno de los sitios.
 
-![ Modal](assets/images/modal.png)
+![ Modal](assets/images/modala.png)
 
 
 
