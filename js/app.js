@@ -1,11 +1,12 @@
+
+
 //Cambia de la pantalla1 a la pantalla 2-->
+
 $(document).ready(function() {
     var restaurante={};
     var $pantalla1 = $('#pantalla1');
     var $pantalla2 = $('#pantalla2');
-    $pantalla2.fadeOut();
-    $pantalla1.fadeOut(5000);
-    $pantalla2.fadeIn(10000);
+    setTimeout(splash, 500);
 
     //initialize  modals
     $('.trigger-modal').modal();
@@ -13,11 +14,13 @@ $(document).ready(function() {
 function loadPage() {
   $("#searcher").keyup(filterRestaurante);
   paintRestauranteInHtml(restaurante);
-  // getLocation();
   var instance = M.Carousel.getInstance(elem);
 }
 
-
+function splash() {
+    $('#pantalla1').fadeOut('slow');
+    $('#pantalla2').fadeIn('slow');
+}
 function paintRestauranteInHtml (restaurante) {
 var $newRestaurante = $("<article />", {
   "class": "card-panel hoverable"
@@ -33,6 +36,7 @@ var $newRestaurante = $("<article />", {
   var $modalButton=$("<button />", {"class":"btn modal-trigger","data-target":"modal1"}).text("ver mapa");
   var $iframe=document.getElementById('iframe')
   $iframe.src=restaurante.src;
+  // $iframe.attr({'width':'600','height':'450 frameborder="0" style="border:0"'})
 
 
 $newRestaurante.append($textName);
@@ -67,44 +71,7 @@ $("#padre").empty();
       });
     }
 
-  // console.log(filteredRestaurante);
 }
-//Geolocalización
-// var x = document.getElementById("demo");
-//
-// function getLocation() {
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition, showError);
-//     } else {
-//         x.innerHTML = "Geolocation is not supported by this browser.";
-//     }
-// }
-//
-// function showPosition(position) {
-//     var latlon = position.coords.latitude + "," + position.coords.longitude;
-//     var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-//     +latlon+"&zoom=14&size=200x200&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
-//     document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-// }
-// //To use this code on your website, get a free API key from Google.
-// //Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
-//
-// function showError(error) {
-//     switch(error.code) {
-//         case error.PERMISSION_DENIED:
-//             x.innerHTML = "User denied the request for Geolocation."
-//             break;
-//         case error.POSITION_UNAVAILABLE:
-//             x.innerHTML = "Location information is unavailable."
-//             break;
-//         case error.TIMEOUT:
-//             x.innerHTML = "The request to get user location timed out."
-//             break;
-//         case error.UNKNOWN_ERROR:
-//             x.innerHTML = "An unknown error occurred."
-//             break;
-//     }
-// }
 
 // Carrusel
 var elem = document.querySelector('.carousel');
