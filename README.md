@@ -1,5 +1,14 @@
 ## ¿Que quieres comer hoy? . . .<h2>
 
+## Tecnologías empleadas en este proyecto:
+* HTML5
+* CSS
+* JavaScript
+* Materialize
+* JSON
+* jQuery
+
+
 Se presenta el diseño, maquetado y funcionalidad, de una aplicación web, que permite que el usuario ingrese el tipo de comida que desea pedir (china, italiana, argentina, japonesa, mexicana y francesa), las cuales fueron ingresadas previamente mediante un formato **JSON.**
 
 ![ Vista1](assets/images/vista1.png)
@@ -18,3 +27,4 @@ Finalmente, por cada restaurante regresado como respuesta se genera también un 
 
 
 Para ver el sitio completo puedes entrar a: [sitio original](https://indezende.github.io/restaurantFilter/index.html).
+#### Este proyecto ha sido realizado para laboratoria México
