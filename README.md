@@ -27,4 +27,4 @@ Finalmente, por cada restaurante regresado como respuesta se genera también un 
 
 
 Para ver el sitio completo puedes entrar a: [sitio original](https://indezende.github.io/restaurantFilter/index.html).
-#### Este proyecto ha sido realizado para laboratoria México
+##### “Desarrollado para [Laboratoria]”
