@@ -1,4 +1,4 @@
-## Foodmap
+# Foodmap
 
 ![image](https://user-images.githubusercontent.com/32860658/38596939-24339af4-3d1a-11e8-9a31-519b08255f23.png)
 
