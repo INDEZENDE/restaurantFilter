@@ -1,6 +1,8 @@
-## ¿Que quieres comer hoy? . . .<h2>
+## Foodmap
 
-## Tecnologías empleadas en este proyecto:
+![image](https://user-images.githubusercontent.com/32860658/38596939-24339af4-3d1a-11e8-9a31-519b08255f23.png)
+
+Tecnologías empleadas en este proyecto:
 * HTML5
 * CSS
 * JavaScript
@@ -27,4 +29,4 @@ Finalmente, por cada restaurante regresado como respuesta se genera también un 
 
 
 Para ver el sitio completo puedes entrar a: [sitio original](https://indezende.github.io/restaurantFilter/index.html).
-##### “Desarrollado para [Laboratoria]”
+“Desarrollado para [Laboratoria]”
